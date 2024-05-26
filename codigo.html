@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografia Felipe</title>
+
+    <style>
+    p {
+        font-style: italic;
+        font-variant: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+        margin: 20px; 
+    }
+    </style>
+
+</head>
+<body>
+    <header class="menu-principal">
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </div>
+    </header>
+
+    <h1><mark>Felipe Almeida</mark></h1>
+    <h2>Sobre mim:</h2>
+    <h3>Eu me chamo Felipe Almeida Gaia Violante, tenho 18 Anos</h3>
+    <p>Atualmente estou cursando Ciência da Computação no período noturno (das 19:00 às 22:00)</p>
+    <p>Gosto de tecnologia, cresci rodeado de jogos e sempre no meio tecnológico, foi o que me fez identificar o que
+        queria</p>
+    <p>Aqui estão alguns cursos meus já concluídos:</p>
+    <ul>
+        <li>IOS (Instituto da Oportunidade Social)-Suporte em T.I</li>
+        <li>Cate- Introdução a Lógica de Programação</li>
+        <li>Cate- Banco de Dados Relacional</li>
+    </ul>
+    <p><b><u><i><mark>Visite minhas redes sociais:</mark></i></u></b></p>
+    <ul>
+        <li><a href="https://www.instagram.com/_almeidxzz?igsh=NWxsMmdqM2luaHU4" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Instagram</a></li>
+        <li><a href="https://br.linkedin.com/in/felipe-almeida-1507b226a" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">LinkedIn</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100007126932423&mibextid=ZbWKwL" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Facebook</a></li>
+        <li><a href="https://wa.me/qr/GOSLWK7XCZWZM1" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">Whatsapp</a></li>
+    </ul>
+
+    <img src="Felipe.jpg" alt="" width="300" height="200">
+
+    <table>
+        <tr>
+            <th>Habilidades:</th>
+            <th>Pontos a melhorar:</th>
+        </tr>
+        <tr>
+            <td>Comunicativo</td>
+            <td>Ansiedade</td>
+        </tr>
+        <tr>
+            <td>Atensioso</td>
+            <td>Proscratinação</td>
+        </tr>
+        <tr>
+            <td>Facil dominio comcomputadores em hardware</td>
+            <td>Alto cobrança</td>
+        </tr>
+    </table>
+    
+    
+    <h2>Contato</h2>
+    <form action="#" method="POST" id="myForm">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="data_nascimento">Data de nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select><br><br>
+
+        <label for="escolaridade">Escolaridade:</label>
+        <input type="text" id="escolaridade" name="escolaridade" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="checkbox" id="concordo" name="concordo" required>
+        <label for="concordo"> Concordo com os termos e condições</label><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event){
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+
+        function validateForm() {
+            var nome = document.getElementById("nome").value;
+            var telefone = document.getElementById("telefone").value;
+            var email = document.getElementById("email").value;
+
+            if (nome == "" || telefone == "" || email == "") {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
